@@ -217,6 +217,7 @@ kubernetes:
         - --authentication-token-webhook-config-file=/etc/kubernetes/authconfig
         - --runtime-config=authentication.k8s.io/v1beta1=true
         - --external-hostname=kubernetes.kubernetes.rancher.internal
+        - --feature-gates=PersistentLocalVolumes=true,MountPropagation=true
         {{- if eq .Values.AUDIT_LOGS "true" }}
         - --audit-log-path=-
         {{- end }}
@@ -314,6 +315,7 @@ controller-manager:
         - --address=0.0.0.0
         - --root-ca-file=/etc/kubernetes/ssl/ca.pem
         - --service-account-private-key-file=/etc/kubernetes/ssl/key.pem
+        - --feature-gates=PersistentLocalVolumes=true,MountPropagation=true
     environment:
         CLOUD_PROVIDER: ${CLOUD_PROVIDER}
         {{- if ne .Values.HTTP_PROXY "" }}
