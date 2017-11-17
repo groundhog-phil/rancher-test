@@ -1,5 +1,5 @@
 .catalog:
-  name: Kubernetes
+  name: Kubernetes-test
   version: v1.8.3-rancher2-1234
   description: Rancher Kubernetes service
   minimum_rancher_version: v1.6.11-rc1

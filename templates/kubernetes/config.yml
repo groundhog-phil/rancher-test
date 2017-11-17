@@ -1,4 +1,4 @@
-name: Kubernetes
+name: Kubernetes-test
 description: |
   Kubernetes service
 version: v1.2.4-rancher10
